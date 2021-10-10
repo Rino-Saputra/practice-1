@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.warn{
+    font-size: 0;
+}
+
+.container {
+    padding: 2em 2.6em;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 0 4em;
+    animation: nav-anm 1.5s ease-out;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #f78a4ac4;
+}
+
+nav ul  a h1 {
+    font-size: 2rem;
+    color: #fc9a61;
+}
+
+section {
+    padding: 4em 1em;
+}
+
+.conten-1 {
+    display: flex;
+    animation: main-anm 2s ease-out;
+}
+
+.manage {
+    width: 20%;
+    position: relative;
+}
+
+.manage .text {
+    color: white;
+    position: absolute;
+    top: 0;
+}
+
+.manage h1 {
+    font-size: 1.9rem;
+    font-weight: normal;
+}
+
+.manage h2 {
+    padding: 1em 0;
+    font-weight: 0;
+    color: #f3bc9df5;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.manage .hero-1 {
+    background-image: url(hero-1.jpg);
+    height: 16vmax;
+    width: 10vmax;
+    background-size: cover;
+    top: 0;
+    margin: 4em 0 0 4em;
+}
+
+.conten-1 .large-font {
+    width: 50%;
+    text-align: center;
+    padding-top: 4em;
+}
+
+.large-font h4 {
+    font-weight: normal;
+    line-height: 0;
+    color: #f7b086;
+}
+
+.large-font span {
+    display: inline-block;
+    height: 1px;
+    width: 50%;
+    background-image: linear-gradient(to right,#f78a4ac4,rgba(0, 0, 0,0.5));
+}
+
+.conten-1 .large-font h1 {
+    font-size: 6.2vmax;
+    font-weight: normal;
+    color: #ec732d;
+}
+
+.conten-1 .btn {
+    width: 20%;
+    position: relative;
+    color: white;
+}
+
+.btn h4 {
+    width: 20%;
+    margin: 4% 0 0 58%;
+    font-weight: normal;
+}
+
+.btn .icon {
+    background-image: url(play.png);
+    height: 5vmax;
+    width: 5vmax;
+    background-size: cover;
+    background-position-x: 4px;
+    border: 1px solid #fc9a61;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.content-2 {
+    display: flex;
+    align-items: center;
+    animation: right-anm 2s ease-out;
+}
+
+.catcher {
+    width: 20%;
+    color: #fc9a61;
+}
+
+.catcher h4 {
+    padding: 1em 0 0 0;
+}
+
+.catcher .catcher-img {
+    background-image: url(1.png);
+    height: 6.6vmax;
+    width: 50%;
+    background-size: cover;
+}
+
+.content-2 .program {
+    width: 60%;
+}
+
+.content-2 .program button {
+    padding: 0.8em 2em;
+    margin-left: 28%;
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(to right,#f57830c4,rgba(0, 0, 0, 0.596));
+    outline: none;
+    border-style: none;
+}
+
+.content-2 .hero-2 {
+    width: 20%;
+}
+
+.content-2 .hero-2 .hero-2-img {
+    background-image: url(hero-1.jpg);
+    height: 16vmax;
+    width: 10vmax;
+    background-size: cover;
+}
+
+.last-content {
+    display: flex;
+    padding: 1em 0 0 0;
+    color: white;
+}
+
+.last-content .empty {
+    width: 20%;
+}
+
+.last-content .id {
+    width: 60%;
+}
+
+.last-content .id h1 {
+    width: 25%;
+    font-size: 2.4rem;
+    display: inline-block;
+}
+
+.last-content .id h4 {
+    width: 50%;
+    display: inline-block;
+}
+
+.solid h4 {
+    color: #f78a4ac4;
+}
+
+@keyframes nav-anm {
+    from {
+        opacity: 0;
+        margin-left: -999px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+@keyframes main-anm {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes right-anm {
+    from {
+        margin-right: -999px;
+        opacity: 0;
+    }
+    to {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes last-anm {
+    from {
+        margin-top: 200px;
+        transform: scale(1,1);
+    }
+    to {
+        margin-top: 250px;
+        transform: scale(1,2);
+    }
+}
+
+@media (min-width:900px) and (max-width:1200px) {
+    .conten-1 .large-font h1 {
+       
+    }
+}
+
+@media (max-width:899px) {
+    .container {
+        display: none;
+    }
+
+    .warn {
+        margin-top: 200px;
+        font-size: 2rem;
+        text-align: center;
+        color: tomato;
+        animation: last-anm 0.5s ease infinite alternate;
+    }
+}
